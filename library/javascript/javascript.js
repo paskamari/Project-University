@@ -48,28 +48,28 @@ function checkcontactus (targetForm){
 	
 	if(require(targetForm.firstname)==false){
 				
-		document.getElementById('err-contact').innerHTML = "please insert your firstname.";
+		document.getElementById('err-contact').innerHTML = "قسمت نام پر نشده است";
 		return false;
 		
 	};
 	
 	if (require(targetForm.youremail)==false || checkEmail(targetForm.youremail)==false){
 		
-		document.getElementById('err-contact').innerHTML = "your email is not true!";
+		document.getElementById('err-contact').innerHTML = "پست الکترونیکی را صحیح وارد کنید";
 		return false;
 		
 	};
 	
 	if(require(targetForm.subject)==false){
 		
-		document.getElementById('err-contact').innerHTML = "please insert your subject.";
+		document.getElementById('err-contact').innerHTML = "قسمت موضوع خالی است";
 		return false;
 		
 	};
 	
 	if(require(targetForm.message)==false){
 		
-		document.getElementById('err-contact').innerHTML = "please insert your message.";
+		document.getElementById('err-contact').innerHTML = "پیغام خود را وارد کنید";
 		return false;
 		
 	};
@@ -82,14 +82,14 @@ function checklogin (targetForm){
 	
 	if(require(targetForm.userlogin)==false ||  checknumber(targetForm.userlogin) == false ||tennumber(targetForm.userlogin)==false){
 		
-		document.getElementById('err-login').innerHTML = "please insert the Collegian.No.";
+		document.getElementById('err-login').innerHTML = "شماره دانشجویی را وارد کنید";
 		return false;
 		
 	};
 	
 	if(require(targetForm.passlogin)==false){
 		
-		document.getElementById('err-login').innerHTML = "please insert the password.";
+		document.getElementById('err-login').innerHTML = "قسمت رمز عبور پر نشده است";
 		return false;
 		
 	};
@@ -100,50 +100,50 @@ function checkregister (targetForm){
 	
 	if(require(targetForm.userreg)==false ||  checknumber(targetForm.userreg) == false ||tennumber(targetForm.userreg)==false){
 		
-		document.getElementById('err-register').innerHTML = "please insert the Collegian.No.";
+		document.getElementById('err-register').innerHTML = "شماره دانشجویی را وارد کنید";
 		return false;
 		
 	};
 	
 	if(require(targetForm.passreg)==false){
 		
-		document.getElementById('err-register').innerHTML = "please insert the password.";
+		document.getElementById('err-register').innerHTML = "قسمت رمز عبور پر نشده است";
 		return false;
 		
 	};
 	
 	if(require(targetForm.repeatpassreg)==false){
 		
-		document.getElementById('err-register').innerHTML = "Repeat password is empty";
+		document.getElementById('err-register').innerHTML = "رمز عبور را تکرار کنید";
 		return false;
 		
 	};
 	
 	if (require(targetForm.emailreg)==false || checkEmail(targetForm.emailreg)==false){
 		
-		document.getElementById('err-register').innerHTML = "your email is not true!";
+		document.getElementById('err-register').innerHTML = "پست الکترونیکی را صحیح وارد کنید";
 		return false;
 		
 	};
 	
 	if(require(targetForm.fnamereg)==false){
-		document.getElementById('err-register').innerHTML = "Insert your Firstname.";
+		document.getElementById('err-register').innerHTML = "قسمت نام پر نشده است";
 		return false;
 		
 	};
 	
 	if(require(targetForm.lnamereg)==false){
-		document.getElementById('err-register').innerHTML = "Insert your Lastname.";
+		document.getElementById('err-register').innerHTML = "نام خانوادگی تان را وارد کنید";
 		return false;
 		
 	};
 	if(targetForm.passreg.value != targetForm.repeatpassreg.value){
 		
-		document.getElementById('err-register').innerHTML = "Repeat password != password";
+		document.getElementById('err-register').innerHTML = "رمز عبور وارد شده با تکرارش همخوانی ندارد";
 		return false;
 	}
 	if(require(targetForm.nationalreg)==false || checknumber(targetForm.nationalreg) == false ||tennumber(targetForm.nationalreg)==false){
-		document.getElementById('err-register').innerHTML = "Insert National.No";
+		document.getElementById('err-register').innerHTML = "لطفا کد ملی تان را وارد کنید";
 		return false;
 		
 	};
@@ -155,18 +155,18 @@ function checkregister (targetForm){
 function checkforgotpass (targetForm){
 	
 	if(require(targetForm.userforgot)==false ||  checknumber(targetForm.userforgot) == false ||tennumber(targetForm.userforgot)==false){
-		document.getElementById('err-forgot').innerHTML = "please insert the Collegian.No.";
+		document.getElementById('err-forgot').innerHTML = "شماره دانشجویی را وارد کنید";
 		return false;
 		
 	};
 	
 	if(require(targetForm.nationalforgot)==false || checknumber(targetForm.nationalforgot) == false ||tennumber(targetForm.nationalforgot)==false){
-		document.getElementById('err-forgot').innerHTML = "Insert National.No";
+		document.getElementById('err-forgot').innerHTML = "لطفا کد ملی تان را وارد کنید";
 		return false;
 	};
 	
 	if (require(targetForm.emailforgot)==false || checkEmail(targetForm.emaiforgot)==false){
-		document.getElementById('err-forgot').innerHTML = "your email is not true!";
+		document.getElementById('err-forgot').innerHTML = "پست الکترونیکی را صحیح وارد کنید";
 		return false;
 		
 	};
@@ -176,22 +176,22 @@ function checkforgotpass (targetForm){
 function checkpersonaledit (targetForm){
 	
 	if(require(targetForm.nationalpro)==false || checknumber(targetForm.nationalpro)==false ||tennumber(targetForm.nationalpro)==false){
-		document.getElementById('err-personaledit').innerHTML = "Insert National.No";
+		document.getElementById('err-personaledit').innerHTML = "لطفا کد ملی تان را وارد کنید";
 		return false;
 	};
 	
 	if (require(targetForm.emailpro)==false || checkEmail(targetForm.emailpro)==false){
-		document.getElementById('err-personaledit').innerHTML = "your email is not true!";
+		document.getElementById('err-personaledit').innerHTML = "پست الکترونیکی را صحیح وارد کنید";
 		return false;
 	};
 	
 	if(require(targetForm.fnamepro)==false){
-		document.getElementById('err-personaledit').innerHTML = "Insert your Firstname.";
+		document.getElementById('err-personaledit').innerHTML = "قسمت نام پر نشده است";
 		return false;
 	};
 	
 	if(require(targetForm.lnamepro)==false){
-		document.getElementById('err-personaledit').innerHTML = "Insert your Lastname.";
+		document.getElementById('err-personaledit').innerHTML = "نام خانوادگی تان را وارد کنید";
 		return false;
 	};	
 	

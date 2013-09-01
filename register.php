@@ -33,7 +33,7 @@ Dear $firsname $lastname
 if ($username == '' || $national == '' || $email == '' || $password != $repeatpass){
 	session_msg('message' ,'تمام گزينه ها را كامل كنيد ');
 	linkbox('./');
-}else if(@mail("$email","$subject","$message","From: $from")){
+}else if(!@mail("$email","$subject","$message","From: $from")){
 		session_msg('message' , 'اشكال در ثبت نام . لطفا مجددا امتحان كنيد.');
 		linkbox('./');
 	}else{

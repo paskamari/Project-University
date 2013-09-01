@@ -3,7 +3,7 @@
 	
 	session();	
 	if(empty($_SESSION['message'])){
-		session_msg('message',' باز كنيد  Firefox   تنظيم شده است پس براي مشاهده كل محتويات با Firefox  اين سايت فقط براي');
+		session_msg('message','بهتر است برای مشاهده کامل وب سایت از مرورگرهای کروم یا فایرفاکس استفاده کنید');
 	};
 	if(empty($_SESSION['vrd'])){
 		session_msg('vrd','');
@@ -18,26 +18,27 @@
 	mysql_select('social');
 
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!doctype html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html;  charset=utf-8" />
-<meta name="description" content="asrarcollege social network for Iranian students. One place to connect with other students of university and earn new technology." />
-<meta name="Keywords" content="asrar,asrarcollege,college,daneshgah,daneshjoo,collegian,university,social,network,computer<?php
-	/*$query = "SELECT * FROM college";
-	$res = @mysql_query($query)  or die('Error ' . mysql_errno().' : '.  mysql_error());
-	while($row = mysql_fetch_array($res,MYSQL_ASSOC)){
-		echo ',' . $row['username'] . ',' . $row['firstname'] . ',' . $row['lastname'] . ',' . $row['firstname'] . ' ' . $row['lastname'] ;
-	};*/
-?>
+	<meta http-equiv="Content-Type" content="text/html;  charset=utf-8" />
+	<meta name="description" content="asrarcollege social network for Iranian students. One place to connect with other students of university and earn new technology." />
+	<meta name="Keywords" content="asrar,asrarcollege,college,daneshgah,daneshjoo,collegian,university,social,network,computer
+	<?php
+		$query = "SELECT * FROM college";
+		$res = @mysql_query($query)  or die('Error ' . mysql_errno().' : '.  mysql_error());
+		while($row = mysql_fetch_array($res,MYSQL_ASSOC)){
+			echo ',' . $row['username'] . ',' . $row['firstname'] . ',' . $row['lastname'] . ',' . $row['firstname'] . ' ' . $row['lastname'] ;
+		};
+	?>
 
-"  />
-<link rel="shortcut icon" href="library/image/icon/icon.png" type="image/x-icon" />
-<link type="text/css" rel="stylesheet" href="library/stylesheet/styleindex.css" />
-<script type="text/javascript" src="library/javascript/jquery-refrens/jquery-1.7.1.min.js"></script>
-<script type="text/javascript" src="library/javascript/jquery.js"></script>
-<script type="text/javascript" src="library/javascript/javascript.js"></script>
-<title>انجمن گروهي دانشجويان اسرار مشهد</title>
+	"  />
+	<link rel="shortcut icon" href="library/image/icon/icon.png" type="image/x-icon" />
+	<link type="text/css" rel="stylesheet" href="library/stylesheet/styleindex.css" />
+	<script type="text/javascript" src="library/javascript/jquery-refrens/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="library/javascript/jquery.js"></script>
+	<script type="text/javascript" src="library/javascript/javascript.js"></script>
+	<title>انجمن گروهي دانشجويان اسرار مشهد</title>
 </head>
 
 <body>
@@ -55,9 +56,8 @@
     	<ul id="navigation">
         
                 <li class="contact"><a><span>تماس با ما</span></a></li>
-                <li class="forgotpass"><a><span>رمز عبور را فراموش كردم</span></a></li>
                 <li class="register"><a><span>ثبت نام</span></a></li>
-                <li class="home"><a><span>ورود</span></a></li>
+                <li class="home"><a><span>خانه</span></a></li>
                 
 		</ul>
         
@@ -75,7 +75,7 @@
             
 				<?php
                 
-                  /*  $query = "SELECT * FROM college";
+                    $query = "SELECT * FROM college";
                     $res = @mysql_query($query)  or die('Error ' . mysql_errno().' : '.  mysql_error());
                     echo '<table id="tablereg" >';
                     while($row = mysql_fetch_array($res,MYSQL_ASSOC)){
@@ -123,7 +123,7 @@
 							echo '';
 						};
 					};
-                    echo '</table>';*/
+                    echo '</table>';
                     
                 ?>
             
@@ -137,13 +137,13 @@
             
                 <div class="waiting"><img src="library/image/pic-site/waiting.gif" width="64" /><h4>لطفا منتظر بمانيد</h4></div>
     
-                <div class="form-con">ده نفر آخر --- آخرين ثبت ناميها ---- آخرين وروديهاي سايت-----آخرين دانشجويان ورودي---- وضعيت ده نفر آخر</div>
+                <div class="form-con"></div>
                 
             </div>
             
             <div class="sum-trak">
            
-                <?php/*
+                <?php
                     $query = "SELECT * FROM totalpage";
                     $res = @mysql_query($query)  or mysql_err();
                     $row = mysql_fetch_array($res,MYSQL_ASSOC);
@@ -169,7 +169,7 @@
                     $q = "UPDATE totalpage SET allvisits='$sumtrak' WHERE id = 1";
                     $res = @mysql_query($q) or mysql_err();
 					mysql_close();
-                    */
+                    
                 ?>
             
             </div>

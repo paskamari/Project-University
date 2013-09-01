@@ -7,20 +7,18 @@ $username = $_POST['userlogin'];
 $password = $_POST['passlogin'];
 if( $username == '' || $password == ''){
 	
-	session_msg('message' ,'Error : fill the rows');
+	session_msg('message' ,'خطا : لطفا دوباره امتحان کنید');
 	linkbox('./');
 	
 }else{
-	
-	$passmd5 = md5($password);
-	
-	$q = "SELECT * FROM college WHERE password='$passmd5' ";
+		
+	$q = "SELECT * FROM college WHERE username='$username' ";
 	
 	$res = @mysql_query($q) or mysql_err();
 	$user = @mysql_fetch_array($res,MYSQL_ASSOC);
-	
-	if(@mysql_num_rows($res)!=1 || $user['username'] != $username){
-		session_msg('message' ,'username & password is not true');
+
+	if(@mysql_num_rows($res)!=1 || $user['repeatpass'] != $password){
+		session_msg('message' ,'شماره دانشجویی و رمز عبورتان اشتباه است');
 		linkbox('./');
 	}else{
 		login();

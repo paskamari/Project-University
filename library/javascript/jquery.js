@@ -28,7 +28,7 @@ $(document).ready(function() {
 	/*===..:: START AJAX LOADER ::..===*/
 	$(".footer").load("library/txt-style-form/footer.html");
 	
-	$(".form-con").load("library/txt-style-form/home.html");
+	$(".form-con").load("library/txt-style-form/login.html");
 	
 	$(".form-con").ajaxStart(function(){
 		$(".waiting").css("display","block");
@@ -65,14 +65,6 @@ $(document).ready(function() {
 	$(".register").click(function(){
 		$(".form-con").stop().animate({'opacity':0},500,function(){
 			$(".form-con").load("library/txt-style-form/register.html",function(){
-				$(".form-con").delay(800).animate({'opacity':1},600);
-			});
-		});
-	});
-	
-	$(".forgotpass").click(function(){
-		$(".form-con").stop().animate({'opacity':0},500,function(){
-			$(".form-con").load("library/txt-style-form/forgotpassword.html",function(){
 				$(".form-con").delay(800).animate({'opacity':1},600);
 			});
 		});
