@@ -1,0 +1,35 @@
+﻿<form action="contactus.php" method="post" onsubmit="return checkcontactus(this)">
+    <table id="tablecont">
+        <tr>
+            <td><input class="text" type="text" name="firstname" style="text-align:right"/></td>
+            <td class="boldtext">:</td>
+            <td class="rightalign">نام و نام خانوادگی</td>
+        </tr>
+        <tr>
+            <td><input class="text" type="text" name="youremail"/></td>
+            <td class="boldtext">:</td>
+            <td class="rightalign">پست الكترونيكي</td>
+        </tr>
+        <tr>
+            <td><input class="text" type="text" name="subject" style="text-align:right"/></td>
+            <td class="boldtext">:</td>
+            <td class="rightalign">موضوع</td>
+        </tr>
+        <tr>
+            <td align="center">info@asrarcollege.ir</td>
+            <td colspan="2" class="rightalign">گیرنده</td>
+        </tr>
+        <tr>
+            <td><textarea name="message" class="text"></textarea><br /><br /></td>
+            <td class="boldtext">:</td>
+            <td class="rightalign">پیغام</td>
+        </tr>
+
+        <tr>
+            <td colspan="3" align="center"><input type="submit" name="subcontact" value="ارسال" class="btn-submit"/></td>
+        </tr>
+        <tr>
+            <td colspan="3" align="center" class="errorline" id="err-contact"></td>
+        </tr>
+    </table>
+</form>

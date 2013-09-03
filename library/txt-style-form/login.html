@@ -1,0 +1,50 @@
+<form action="login.php" method="post" onsubmit="return checklogin (this)">
+    <table id="tablecont">
+        <tr>
+            <td class="leftalign"><input type="text" name="userlogin" class="text" maxlength="10" /></td>
+            <td class="boldtext">:</td>
+            <td align="right">شماره دانشجويي</td>
+        </tr>
+        <tr>
+            <td class="leftalign"><input type="password" name="passlogin" class="text" /></td>
+            <td class="boldtext">:</td>
+            <td align="right">رمز عبور</td>
+        </tr>
+        <tr>
+            <td colspan="3" align="center"><br /><input type="submit" name="sublogin" value="ورود به سايت" class="btn-submit" /></td>
+        </tr>
+        <tr>
+            <td colspan="3" align="center" class="errorline" id="err-login"></td>
+        </tr>
+    </table>
+</form>
+<br/><br/>
+<form action="forgotpass.php" method="post" onsubmit="return checkforgotpass (this)">
+    <table id="tablecont">
+        <tr>
+            <td colspan="3" class="boldtext text"><p>رمز عبور را فراموش کردم</p></td>
+        </tr>
+        <tr>
+            <td class="leftalign"><input type="text" name="userforgot" maxlength="10" class="text" /></td>
+            <td class="boldtext">:</td>
+            <td align="right">شماره دانشجويي</td>
+        </tr>
+        <tr>
+            <td class="leftalign"><input class="text" type="text" name="nationalforgot" placeholder="کد ملی" maxlength="10"/></td>
+            <td class="boldtext">:</td>
+            <td align="right">کد ملی</td>
+        </tr>
+        <tr>
+            <td class="leftalign"><input class="text" type="text" name="emailforgot"/></td>
+            <td class="boldtext">:</td>
+            <td class="rightalign">پست الكترونيكي</td>
+        </tr>
+
+        <tr>
+            <td colspan="3" align="center"><input class="btn-submit" type="submit" name="subforgot" value="ارسال" /></td>
+        </tr>
+        <tr>
+            <td colspan="3" align="center" class="errorline" id="err-forgot"></td>
+        </tr> 
+    </table>
+</form>
